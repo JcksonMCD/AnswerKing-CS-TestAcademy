@@ -18,6 +18,6 @@ phases:
       - echo Publish started on `date`
       - dotnet publish -c Release -r linux-x64 -o ./ Answer.King.Api/Answer.King.Api.csproj
 
-  artifacts:
-    files:
+artifacts:
+  files:
     - ./**/*
