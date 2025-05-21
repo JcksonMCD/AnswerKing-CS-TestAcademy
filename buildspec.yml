@@ -17,7 +17,7 @@ phases:
   post_build:
     commands:
       - echo Publish started on `date`
-      - dotnet publish -c Release -r linux-x64 -o ./ Answer.King.Api/Answer.King.Api.csproj
+      - dotnet publish --configuration Release --output ./publish ./ '**/*.csproj'
 
 artifacts:
   files:
