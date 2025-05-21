@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore Answer.King.Api/Answer.King.Api.csproj
+      - dotnet restore
 
   build:
     commands:
