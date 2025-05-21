@@ -14,11 +14,3 @@ phases:
       - echo Build started on `date`
       - dotnet build 
 
-  post_build:
-    commands:
-      - echo Publish started on `date`
-      - dotnet publish --configuration Release --output ./publish ./ '**/*.csproj'
-
-artifacts:
-  files:
-    - ./**/*
