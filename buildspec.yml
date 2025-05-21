@@ -1,9 +1,23 @@
 version: 0.2
 phases:
   install:
+    runtime-versions:
+      dotnet: 9.0
+
+  pre_build:
     commands:
-      - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS
+      - echo Restore started on `date`
+
   build:
     commands:
-      - dotnet restore Answer.King.sln
-      - dotnet build Answer.King.sln
+      - echo Build started on `date`
+      - dotnet build Answer.King.Api/Answer.King.Api.csproj
+
+  post_build:
+    commands:
+      - echo Publish started on `date`
+      - dotnet publish -c Release -r linux-x64 -o ./ Answer.King.Api/Answer.King.Api.csproj
+
+  artifacts:
+  files:
+    - ./**/*
