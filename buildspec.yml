@@ -6,11 +6,19 @@ phases:
 
   pre_build:
     commands:
-      - echo Restore started on `date`
+      - echo Restore started on $(date +%Y-%m-%d) 
       - dotnet restore
 
   build:
     commands:
-      - echo Build started on `date`
+      - echo Build started on $(date +%Y-%m-%d) 
       - dotnet build 
 
+  post_build:
+    commands:
+      - echo Running tests...
+      - dotnet test --no-build --verbosity normal
+
+artifacts:
+  files:
+    - ./**/*
