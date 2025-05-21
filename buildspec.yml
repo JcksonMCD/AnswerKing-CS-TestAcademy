@@ -12,7 +12,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build Answer.King.Api/Answer.King.Api.csproj
+      - dotnet build 
 
   post_build:
     commands:
