@@ -1,46 +1,9 @@
 version: 0.2
-name: $(Date:yyyMMdd)4(Rev:.r)
-
-trigger:
-  branches:
-    include:
-    - develop
-
-pool:
-  name: Hosted Ubuntu 2004
-
-steps:
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '3.1.100'
-
-- task: DotNetCoreCLI@2
-  displayName: 'Restore NuGet Packages'
-  inputs:
-    command: restore
-    projects: 'src/**/*.csproj'
-
-- task: DotNetCoreCLI@2
-  displayName: Build
-  inputs:
-    projects: 'src/*/*.csproj'
-
-- task: DotNetCoreCLI@2
-  displayName: 'Running .NET Core Unit Tests'
-  inputs:
-    command: test
-    projects: 'src/tests/*Test/*.csproj'
-
-- task: DotNetCoreCLI@2
-  displayName: Publish
-  inputs:
-    command: publish
-    arguments: '--configuration Release --output /output/'
-    zipAfterPublish: false
-    modifyOutputPath: false
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
-  pathToPublish: '$(Build.ArtifactStagingDirectory)'
-  artifactName: 'release'
+phases:
+  install:
+    commands:
+      - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS
+  build:
+    commands:
+      - dotnet restore Net7TestApp.sln
+      - dotnet build Net7TestApp.sln
