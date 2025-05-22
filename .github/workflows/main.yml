@@ -22,14 +22,8 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Add nuget.org as nuget package source
-      run: dotnet nuget add source https://api.nuget.org/v3/index.json --name nuget.org
-
     - name: Restore NuGet packages 
-      uses: dotnet/actions@v1
-      with:
-        command: restore
-        projects: '**/*.csproj'
+      run: dotnet restore
 
     - name: Build all packages 
       uses: dotnet/actions@v1
