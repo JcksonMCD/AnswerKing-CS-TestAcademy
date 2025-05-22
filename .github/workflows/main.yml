@@ -23,7 +23,7 @@ jobs:
         dotnet-version: '7.0.102'
 
     - name: Restore NuGet packages 
-      uses: dotnet/actions@v1
+      uses: dotnet/actions@v4
       with:
         command: restore
         projects: '**/*.csproj'
