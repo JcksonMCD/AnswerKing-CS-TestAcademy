@@ -25,21 +25,9 @@ jobs:
     - run: dotnet restore
 
     - name: Execute dotnet
-      run: dotnet build /home/runner/work/AnswerKing-CS-TestAcademy/AnswerKing-CS-TestAcademy/src/Answer.King.Domain/Answer.King.Domain.csproj 
-    - run: dotnet build /home/runner/work/AnswerKing-CS-TestAcademy/AnswerKing-CS-TestAcademy/src/Answer.King.Api/Answer.King.Api.csproj 
-    - run: dotnet build /home/runner/work/AnswerKing-CS-TestAcademy/AnswerKing-CS-TestAcademy/src/Answer.King.Infrastructure/Answer.King.Infrastructure.csproj
+      run: dotnet build 
 
-    # - name: Restore NuGet packages 
-    #   uses: dotnet/actions@v1
-    #   with:
-    #     command: restore
-    #     projects: '**/*.csproj'
-
-    # - name: Build all packages 
-    #   uses: dotnet/actions@v1
-    #   with:
-    #     command: build
-    #     projects: '**/*.csproj'
+  
 
     # - name: Run unit tests in test folder
     #   uses: dotnet/actions@v1
