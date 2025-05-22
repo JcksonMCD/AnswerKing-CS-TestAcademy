@@ -25,7 +25,7 @@ jobs:
     - run: dotnet restore
 
     - name: Execute dotnet
-      run: dotnet build ../../src/../*.csproj
+      run: dotnet build ../../src/Answer.King.Api/Answer.King.Api.csproj
 
     # - name: Restore NuGet packages 
     #   uses: dotnet/actions@v1
