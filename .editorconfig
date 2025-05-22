@@ -4,6 +4,9 @@
 # See https://github.com/RehanSaeed/EditorConfig for updates to this file.
 # See http://EditorConfig.org for more information about .editorconfig files.
 
+[*.g.cs]
+dotnet_diagnostic.CS1591.severity = none
+
 ##########################################
 # Common Settings
 ##########################################
