@@ -26,13 +26,13 @@ jobs:
       run: dotnet restore
 
     - name: Execute dotnet build
-      run: dotnet build --configuration Release --output ./publish
+      run: dotnet build
 
     - name: Run unit tests in test folder
       run: dotnet test
 
     - name: Publish all projects as Release
-      run: dotnet publish --configuration Release --output ./publish
+      run: dotnet publish
     
     - name: Upload artifact
       uses: actions/upload-artifact@v4
