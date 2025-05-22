@@ -19,6 +19,3 @@ phases:
       - echo Running tests...
       - dotnet test --no-build --verbosity normal
 
-artifacts:
-  files:
-    - ./**/*
