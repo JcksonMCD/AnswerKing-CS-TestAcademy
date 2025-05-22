@@ -22,16 +22,14 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    # - name: Restore NuGet packages 
-    #   run: dotnet restore
+    - name: Install dependencies 
+      run: dotnet restore
 
-    - run: dotnet build <my project>
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
 
-    - name: Run unit tests in test folder
-      uses: dotnet/actions@v1
-      with:
-        command: test
-        projects: 'src/tests/*Tests/*.csproj'
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
 
     - name: Publish all projects as Release
       uses: dotnet/actions@v1
