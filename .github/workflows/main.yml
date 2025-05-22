@@ -33,3 +33,9 @@ jobs:
 
     - name: Publish all projects as Release
       run: dotnet publish
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: my-net-artifact
+
