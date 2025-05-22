@@ -25,7 +25,7 @@ jobs:
     - run: dotnet restore
 
     - name: Execute dotnet
-      run: dotnet build '"%cd%\%~1\%%~nxG\%%~nxG.csproj"'
+      run: dotnet build '%cd%\%~1\%%~nxG\%%~nxG.csproj'
 
     # - name: Restore NuGet packages 
     #   uses: dotnet/actions@v1
