@@ -25,7 +25,7 @@ jobs:
     - run: dotnet restore
 
     - name: Execute dotnet
-      run: dotnet build '**/*.csproj'
+      run: dotnet build **/*.csproj
 
     # - name: Restore NuGet packages 
     #   uses: dotnet/actions@v1
