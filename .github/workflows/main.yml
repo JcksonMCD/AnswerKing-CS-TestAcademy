@@ -25,11 +25,11 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
 
-    - name: Execute dotnet
+    - name: Execute dotnet build
       run: dotnet build 
 
     - name: Run unit tests in test folder
-      run: test
+      run: dotnet test
 
     - name: Publish all projects as Release
       run: publish --configuration Release --output ./publish
