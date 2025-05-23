@@ -1,10 +1,7 @@
 name: Build
 
 on:
-  push:
-    branches:
-    - develop
-  pull_request:
+  push | pull_request:
     branches:
     - develop
   workflow_dispatch:
