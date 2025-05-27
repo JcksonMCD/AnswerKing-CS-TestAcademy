@@ -6,5 +6,3 @@ COPY . .
 RUN dotnet restore
 
 RUN dotnet publish
-
-EXPOSE 8080
