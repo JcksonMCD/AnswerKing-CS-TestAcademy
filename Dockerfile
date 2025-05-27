@@ -7,3 +7,5 @@ COPY . .
 RUN dotnet build
 
 RUN dotnet publish
+
+CMD [ "dotnet run" ]
