@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN dotnet restore src/Answer.King.Api/Answer.King.Api.csproj
+RUN dotnet restore
 
 RUN dotnet publish src/Answer.King.Api/Answer.King.Api.csproj -c Release -o /app/out
 
