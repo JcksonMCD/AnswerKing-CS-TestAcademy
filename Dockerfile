@@ -7,5 +7,3 @@ COPY . .
 RUN dotnet restore
 
 RUN dotnet publish -o out
-
-ENTRYPOINT ["dotnet", "Answer.King.Api.dll"]
