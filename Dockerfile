@@ -4,8 +4,10 @@ WORKDIR /app
 
 COPY . .
 
+RUN dotnet restore
+
 RUN dotnet build
 
 RUN dotnet publish
 
-CMD [ "dotnet run" ]
+ENTRYPOINT [ "dotnet" ]
