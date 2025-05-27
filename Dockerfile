@@ -6,6 +6,6 @@ COPY . .
 
 RUN dotnet restore
 
-RUN dotnet publish -o out
+RUN dotnet publish -c Release -o out
 
-CMD [ "dotnet run" ]
+CMD [ "dotnet", "out/Answer.King.*.dll" ]
