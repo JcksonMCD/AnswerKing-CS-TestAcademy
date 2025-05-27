@@ -10,4 +10,4 @@ RUN dotnet build
 
 RUN dotnet publish
 
-ENTRYPOINT [ "dotnet" ]
+ENTRYPOINT [ "dotnet" , "AnswerKing.dll"]
