@@ -7,3 +7,5 @@ COPY . .
 RUN dotnet restore
 
 RUN dotnet publish -o out
+
+CMD [ "dotnet run" ]
