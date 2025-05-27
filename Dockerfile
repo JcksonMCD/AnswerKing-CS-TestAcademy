@@ -6,8 +6,6 @@ COPY . .
 
 RUN dotnet restore
 
-RUN dotnet build
+RUN dotnet publish src/Answer.King.Api/Answer.King.Api.csproj -c Release -o out
 
-RUN dotnet publish
-
-ENTRYPOINT [ "dotnet" , "AnswerKing.dll"]
+ENTRYPOINT ["dotnet", "Answer.King.Api.dll"]
