@@ -11,11 +11,12 @@ phases:
 
   build:
     commands:
-      - echo Build started on $(date +%Y-%m-%d) 
+      - echo Build started on $(date +%Y-%m-%d)  
       - dotnet build 
 
   post_build:
     commands:
       - echo Running tests...
       - dotnet test --no-build --verbosity normal
+      
 
