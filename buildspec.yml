@@ -18,4 +18,5 @@ phases:
     commands:
       - echo Running tests...
       - dotnet test --no-build --verbosity normal
+      
 
