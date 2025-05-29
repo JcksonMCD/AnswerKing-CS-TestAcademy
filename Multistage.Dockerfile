@@ -15,4 +15,4 @@ WORKDIR /app
 
 COPY --from=build /app/out /app
 
-CMD [ "dotnet", "Answer.King.Api.dll"]
+CMD [ "dotnet", "Answer.King.Api.dll"] 
